@@ -14,6 +14,10 @@
 * Браузер Google Chrome
 
    https://www.google.com/chrome/
+   
+* **Node.js** под Windows 64bit
+   
+   https://nodejs.org/dist/v8.12.0/node-v8.12.0-x64.msi
 
 ## ДЗ_1
 
