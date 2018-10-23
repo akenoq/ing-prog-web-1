@@ -1,0 +1,4 @@
+ipconfig //узнать ваш ip
+
+localhost:5005 //в браузере
+
