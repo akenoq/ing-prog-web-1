@@ -1,6 +1,11 @@
 "use strict";
 
 window.onload = function () {
+
+    if(localStorage.getItem("book") === null) {
+        localStorage.setItem("book", JSON.stringify([]))
+    }
+
     let editName = document.getElementById("editName");
     let editPhone = document.getElementById("editPhone");
     let addBtn = document.getElementById("addBtn");
