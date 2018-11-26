@@ -26,6 +26,49 @@ window.onload = function () {
             name: editName.value,
             phone: editPhone.value
         };
-        addRecord(record);
+        if (record.name !== "" && record.phone !== "") {
+            addRecord(record);
+            editName.value = "";
+            editPhone.value = "";
+            alert("Запись успешно добавлена") // заменить на нормальные сообщения
+        } else {
+            alert("Заполните поля") // заменить на нормальные сообщения
+        }
+    };
+
+    let findName = document.getElementById("findName");
+    let findBtn = document.getElementById("findBtn");
+    let resultBox = document.getElementById("result");
+
+    findBtn.onclick = function () {
+        resultBox.innerHTML = "";
+        let name = findName.value;
+
+        if (name !== "") {
+            let book = getAllRecords();
+            for (let i = 0; i < book.length; i++) {
+                if(book[i].name === name) {
+                    // доделать до вида списка, то есть, если несколько записей,
+                    // то 1. 123-123-123, 2. 456-456-456
+                    resultBox.innerHTML = resultBox.innerHTML + "<br>" + book[i].phone
+                }
+            }
+            if (resultBox.innerHTML === "") {
+                resultBox.innerHTML = "Запись не найдена"
+            }
+            findName.value = "";
+        } else {
+            alert("Введите имя для поиска")
+        }
     }
 };
+
+
+
+
+
+
+
+
+
+

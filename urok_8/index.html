@@ -2,6 +2,9 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <!-- Мобильная версия -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" type="text/css">
     <title>Телефонная книга</title>
 </head>
 <body>
@@ -11,7 +14,7 @@
 
         <b>Имя</b>
         <input type="text" id="editName" placeholder="Петр">
-        <br>
+        <br><br>
 
         <b>Телефон</b>
         <input type="text" id="editPhone" placeholder="7 912 345 6789">
@@ -24,8 +27,15 @@
 
     <div class="finding">
         <h3>Поиск записи</h3>
-    </div>
 
+        <b>Имя</b>
+        <input type="text" id="findName" placeholder="Петр">
+        <br><br>
+
+        <button id="findBtn">Найти</button>
+
+    </div>
+    <h1 id="result"></h1>
     <script src="code.js"></script>
 </body>
 </html>
