@@ -1,74 +1,78 @@
 "use strict";
 
-window.onload = function () {
-
-    if(localStorage.getItem("book") === null) {
-        localStorage.setItem("book", JSON.stringify([]))
-    }
-
-    let editName = document.getElementById("editName");
-    let editPhone = document.getElementById("editPhone");
+window.onload = function ()
+{
+    let editA = document.getElementById("editA");
+    let editB = document.getElementById("editB");
     let addBtn = document.getElementById("addBtn");
 
-    function getAllRecords() {
-        let bookFromStorage = localStorage.getItem("book");
-        return JSON.parse(bookFromStorage);
+    let editC = document.getElementById("editC");
+    let findBtn = document.getElementById("findBtn");
+
+    let result = document.getElementById("result");
+    let error = document.getElementById("error");
+
+    if (localStorage.getItem("book") === null) {
+        localStorage.setItem("book", JSON.stringify([]));
+    }
+
+    ///////////////////////////////////////////////////////
+
+    function getBookArray() {
+        return JSON.parse(localStorage.getItem("book"));
     }
 
     function addRecord(record) {
-        let bookMas = getAllRecords();
-        bookMas.push(record);
-        localStorage.setItem("book", JSON.stringify(bookMas))
+        let book = getBookArray();
+        book.push(record);
+
+        localStorage.setItem("book", JSON.stringify(book));
+
+        console.log(book);
     }
+
+    ///////////////////////////////////////////////////////
 
     addBtn.onclick = function () {
         let record = {
-            name: editName.value,
-            phone: editPhone.value
+            name: editA.value,
+            number: editB.value
         };
-        if (record.name !== "" && record.phone !== "") {
+
+        if (record.name !== "" && record.number !== "") {
             addRecord(record);
-            editName.value = "";
-            editPhone.value = "";
-            alert("Запись успешно добавлена") // заменить на нормальные сообщения
-        } else {
-            alert("Заполните поля") // заменить на нормальные сообщения
+            alert("Запись успешно добавлена");
+            editA.value = "";
+            editB.value = "";
+        }
+        else {
+            alert("Заполните поля")
         }
     };
 
-    let findName = document.getElementById("findName");
-    let findBtn = document.getElementById("findBtn");
-    let resultBox = document.getElementById("result");
-
     findBtn.onclick = function () {
-        resultBox.innerHTML = "";
-        let name = findName.value;
+        let name = editC.value.toUpperCase(); // капсом
 
         if (name !== "") {
-            let book = getAllRecords();
+            let number = "NNN";
+            let book = getBookArray();
+
             for (let i = 0; i < book.length; i++) {
-                if(book[i].name === name) {
-                    // доделать до вида списка, то есть, если несколько записей,
-                    // то 1. 123-123-123, 2. 456-456-456
-                    resultBox.innerHTML = resultBox.innerHTML + "<br>" + book[i].phone
+                if (book[i].name.toUpperCase() === name) { // капсом
+                    number = book[i].number;
+                    break;
                 }
             }
-            if (resultBox.innerHTML === "") {
-                resultBox.innerHTML = "Запись не найдена"
+
+            if (number !== "NNN") {
+                result.innerHTML = name + ": " + number;
+                editC.value = "";
+            } else {
+                error.innerHTML = "Запись не найдена";
             }
-            findName.value = "";
-        } else {
-            alert("Введите имя для поиска")
+        }
+        else {
+            alert("Заполните поля");
         }
     }
 };
-
-
-
-
-
-
-
-
-
-
