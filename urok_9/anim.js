@@ -90,11 +90,12 @@ window.onload = function () {
         drawHero();
         drawKwa(200, 200);
     }, 30);
-
+	
+    // будем доделывать
     let inter_2 = setInterval(function () {
-        let xEnemy = getRandom(0, holstWidth - 10);
-        let yEnemy = getRandom(0, holstHeight - 10);
-        drawKwa(xEnemy, yEnemy);
+        // let xEnemy = getRandom(0, holstWidth - 10);
+        // let yEnemy = getRandom(0, holstHeight - 10);
+        // drawKwa(xEnemy, yEnemy);
     }, 1000);
 };
 
