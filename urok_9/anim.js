@@ -14,6 +14,7 @@ window.onload = function () {
         kObj.xx = xx;
         kObj.yy = yy;
         kwa.push(kObj);
+        // kwa.push({xx: xx, yy: yy});
     }
 
     function zapFon() {
@@ -41,7 +42,7 @@ window.onload = function () {
     // рисуем врага
     function drawKwa(xx, yy) {
         let size = 10;
-        holst.fillStyle = "#2ccd30";
+        holst.fillStyle = "#0600cd";
         holst.fillRect(xx, yy, size, size);
     }
 
@@ -96,7 +97,24 @@ window.onload = function () {
         zapFon();
         controlHero();
         drawHero();
-        drawKwa(200, 200);
+        // for (let i = 0; i < kwa.length; i++) {}
+        kwa.forEach(function (k_el, indx, mas) {
+            drawKwa(k_el.xx, k_el.yy);
+
+            let flagX = false; // флаг столкновения по оси X
+            let flagY = false; // флаг столкновения по оси Y
+
+            // && - AND, || - OR
+            if ((k_el.xx < xHero && xHero - k_el.xx < 10) || (k_el.xx > xHero && k_el.xx - xHero < 50)) {
+                flagX = true;
+            }
+            if ((k_el.yy < yHero && yHero - k_el.yy < 10) || (k_el.yy > yHero && k_el.yy - yHero < 50)) {
+                flagY = true;
+            }
+            if (flagX === true && flagY === true) {
+                mas.splice(indx, 1);
+            }
+        });
     }, 30);
 	
     // будем доделывать
@@ -107,11 +125,3 @@ window.onload = function () {
         console.log(kwa);
     }, 1000);
 };
-
-
-
-
-
-
-
-
