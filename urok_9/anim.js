@@ -8,6 +8,14 @@ window.onload = function () {
     let holstWidth = can.width; // ширина
     let holstHeight = can.height; // высота
 
+    let kwa = [];
+    function addKwa(xx, yy) {
+        let kObj = {};
+        kObj.xx = xx;
+        kObj.yy = yy;
+        kwa.push(kObj);
+    }
+
     function zapFon() {
         // чистим прямоугольник размером 800*600 из точки (0,0)
         holst.clearRect(0,0,800,600);
@@ -93,9 +101,10 @@ window.onload = function () {
 	
     // будем доделывать
     let inter_2 = setInterval(function () {
-        // let xEnemy = getRandom(0, holstWidth - 10);
-        // let yEnemy = getRandom(0, holstHeight - 10);
-        // drawKwa(xEnemy, yEnemy);
+        let xEnemy = getRandom(0, holstWidth - 10);
+        let yEnemy = getRandom(0, holstHeight - 10);
+        addKwa(xEnemy, yEnemy);
+        console.log(kwa);
     }, 1000);
 };
 
