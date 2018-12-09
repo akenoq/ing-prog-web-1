@@ -84,7 +84,7 @@ window.onload = function () {
         if (a === true && xHero > 0)
             xHero = xHero - speedHero;
 
-        if (d === true && yHero + sizeHero < holstWidth)
+        if (d === true && xHero + sizeHero < holstWidth)
             xHero = xHero + speedHero;
     }
 
