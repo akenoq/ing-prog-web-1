@@ -9,13 +9,15 @@ window.onload = function () {
     let holstWidth = can.width; // ширина
     let holstHeight = can.height; // высота
 
-    let kwa = [];
-    function addKwa(xx, yy) {
-        let kObj = {};
-        kObj.xx = xx;
-        kObj.yy = yy;
-        kwa.push(kObj);
-        // kwa.push({xx: xx, yy: yy});
+    let kwa = []; // создаем массив еды
+    // функция добавления в массив еды kwa
+    // kwa - у нас будет массивом обьектов вида {xx: 123, yy: 123}, то есть массив обьектов с координатами каждой еды
+    function addKwa(xx, yy) { 
+        let kObj = {}; // обьект для промежуточного хранения координат новой еды
+        kObj.xx = xx; // в обьект сохраняем коррдинату по X
+        kObj.yy = yy; // и по Y
+        kwa.push(kObj); // добаыляем обьект в массив
+        // kwa.push({xx: xx, yy: yy}); - можно было написать вместо всего в этой функции одну такую строку
     }
 
     function zapFon() {
@@ -94,43 +96,50 @@ window.onload = function () {
         return ans;
     }
 
-    let score = 0;
+    let score = 0; // переменная для хранения очков
     let inter_1 = setInterval(function () {
         zapFon();
         controlHero();
         drawHero();
-        // for (let i = 0; i < kwa.length; i++) {}
+        // forEach - альтернатива циклу for для перебора элементов массива
+        // где k_el – очередной элемент массива,
+        // indx – его номер,
+        // mas – массив, который перебирается.
+        // тут можно было привычно: for (let i = 0; i < kwa.length; i++) {...}
         kwa.forEach(function (k_el, indx, mas) {
-            drawKwa(k_el.xx, k_el.yy);
+            drawKwa(k_el.xx, k_el.yy); // рисуем очередной элемент k_el из массива еды, по его координатам k_el.xx, k_el.yy
 
             let flagX = false; // флаг столкновения по оси X
             let flagY = false; // флаг столкновения по оси Y
 
-            // && - AND, || - OR
-            if ((k_el.xx < xHero && xHero - k_el.xx < 10) || (k_el.xx > xHero && k_el.xx - xHero < 50)) {
+            // проверка касания столкновения героя с едой
+            // сравниваем координату героя с координатой очередного k_el по оси X и по оси Y            
+            // && - AND (логическое И), || - OR (логическое ИЛИ)
+            if (((k_el.xx < xHero) && (xHero - k_el.xx < 10)) || ((k_el.xx > xHero) && (k_el.xx - xHero < 50))) {
                 flagX = true;
             }
-            if ((k_el.yy < yHero && yHero - k_el.yy < 10) || (k_el.yy > yHero && k_el.yy - yHero < 50)) {
+            if (((k_el.yy < yHero) && (yHero - k_el.yy < 10)) || ((k_el.yy > yHero) && (k_el.yy - yHero < 50))) {
                 flagY = true;
             }
-            if (flagX === true && flagY === true) {
-                mas.splice(indx, 1);
-                score = score + 1000;
-                scoreBox.innerHTML = "Очки: " + score;
+            if (flagX === true && flagY === true) { // если по оси X и по оси Y столкновение пересечение ггероя и k_el было
+                // mas.splice(index, 1) - удаление одного элемента из массива mas, начиная с индекса index
+                mas.splice(indx, 1); // удаляем этот элемент еды k_el из массива еды kwa
+                score = score + 1000; // увеличиваем счетчик очков
+                scoreBox.innerHTML = "Очки: " + score; // в html выводим очки, смотреть anim.html
             }
         });
     }, 30);
 
-    let kwa_counter = 0;
-    let kwa_max = 30;
-    // будем доделывать
+    let kwa_counter = 0; // счетчик еды
+    let kwa_max = 30; // максимальное количество еды, которое генерируем
+    // в этом интервале генерируем еду (каждую секунду добавляем новый элемент еды в массив еды kwa)
     let inter_2 = setInterval(function () {
-        if (kwa_counter <= kwa_max) {
+        if (kwa_counter <= kwa_max) { // если еще не сгенерили все 30 элементов еды, то генерируем
             let xEnemy = getRandom(0, holstWidth - 10);
             let yEnemy = getRandom(0, holstHeight - 10);
-            addKwa(xEnemy, yEnemy);
-            kwa_counter = kwa_counter + 1;
-            console.log(kwa);
+            addKwa(xEnemy, yEnemy); // функция добавления очередной еды с координатами в массив еды (kwa)
+            kwa_counter = kwa_counter + 1; // увеличение счетчика еды
+            console.log(kwa); // отладочная распечатка массива еды
         }
     }, 1000);
 };
