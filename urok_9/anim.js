@@ -3,6 +3,7 @@
 window.onload = function () {
     let can = document.getElementById("can");
     let holst = can.getContext("2d");
+    let scoreBox = document.getElementById("scoreBox");
 
     // получаем размеры canvas, заданные в html
     let holstWidth = can.width; // ширина
@@ -93,6 +94,7 @@ window.onload = function () {
         return ans;
     }
 
+    let score = 0;
     let inter_1 = setInterval(function () {
         zapFon();
         controlHero();
@@ -113,15 +115,22 @@ window.onload = function () {
             }
             if (flagX === true && flagY === true) {
                 mas.splice(indx, 1);
+                score = score + 1000;
+                scoreBox.innerHTML = "Очки: " + score;
             }
         });
     }, 30);
-	
+
+    let kwa_counter = 0;
+    let kwa_max = 30;
     // будем доделывать
     let inter_2 = setInterval(function () {
-        let xEnemy = getRandom(0, holstWidth - 10);
-        let yEnemy = getRandom(0, holstHeight - 10);
-        addKwa(xEnemy, yEnemy);
-        console.log(kwa);
+        if (kwa_counter <= kwa_max) {
+            let xEnemy = getRandom(0, holstWidth - 10);
+            let yEnemy = getRandom(0, holstHeight - 10);
+            addKwa(xEnemy, yEnemy);
+            kwa_counter = kwa_counter + 1;
+            console.log(kwa);
+        }
     }, 1000);
 };
