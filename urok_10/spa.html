@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Single Page Application</title>
+</head>
+<body>
+
+    <div id="mainMenu" class="myBox">
+        <h3>Меню</h3>
+        <div>
+            <button id="toAboutBtn">Об игре</button>
+            <br>
+            <br>
+            <button id="toResultBtn">Результы</button>
+        </div>
+    </div>
+    <div id="aboutGame" class="myBox" hidden>
+        <h3>Об игре</h3>
+        <button id="backBtnAbout">В меню</button>
+    </div>
+    <div id="resultGame" class="myBox" hidden>
+        <h3>Результы</h3>
+        <button id="backBtnResult">В меню</button>
+    </div>
+
+    <script src="pageWorker.js"></script>
+</body>
+</html>
