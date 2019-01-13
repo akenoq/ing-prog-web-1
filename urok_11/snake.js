@@ -21,7 +21,7 @@ window.onload = function () {
         holst.fillStyle = "#535353";
         holst.fillRect(0, 0, canvasW, canvasH);
 
-        // перемещаем голову звейки
+        // перемещаем голову змейки
         snake.x += snake.dx; // a += 5 <=> a = a + 5
         snake.y += snake.dy;
 
