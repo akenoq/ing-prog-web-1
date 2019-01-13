@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e3a79c8-de53-4cda-929e-967c21933a8d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/urok_11/snake.js" beforeDir="false" afterPath="$PROJECT_DIR$/urok_11/snake.js" afterDir="false" />
-    </list>
+    <list default="true" id="1e3a79c8-de53-4cda-929e-967c21933a8d" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -16,71 +14,37 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urok_11/snake.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urok_11/snake.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/INFO.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="250">
-                <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+              <first_editor relative-caret-position="213">
+                <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urok_5/static/index.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urok_5/index.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urok_4/index_method_v1.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/urok_11/snake.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-168" />
+            <state relative-caret-position="22">
+              <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urok_4/index_method_v2.js">
+        <entry file="file://$PROJECT_DIR$/urok_9/anim.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1716" />
+            <state relative-caret-position="-2918">
+              <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urok_4/work_with_file.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-308" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urok_3/urok_3.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-396" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urok_2/urok_2.js">
+        <entry file="file://$PROJECT_DIR$/urok_7/code.js">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -93,8 +57,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/urok_9/anim.js" />
-        <option value="$PROJECT_DIR$/urok_11/snake.js" />
         <option value="$PROJECT_DIR$/INFO.md" />
+        <option value="$PROJECT_DIR$/urok_11/snake.js" />
       </list>
     </option>
   </component>
@@ -121,7 +85,27 @@
             <path>
               <item name="ing-prog-web-1" type="b2602c69:ProjectViewProjectNode" />
               <item name="ing-prog-web-1" type="462c0819:PsiDirectoryNode" />
-              <item name="urok_6" type="462c0819:PsiDirectoryNode" />
+              <item name="urok_7" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ing-prog-web-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ing-prog-web-1" type="462c0819:PsiDirectoryNode" />
+              <item name="urok_8" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ing-prog-web-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ing-prog-web-1" type="462c0819:PsiDirectoryNode" />
+              <item name="urok_9" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ing-prog-web-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ing-prog-web-1" type="462c0819:PsiDirectoryNode" />
+              <item name="urok_10" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ing-prog-web-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ing-prog-web-1" type="462c0819:PsiDirectoryNode" />
+              <item name="urok_11" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -166,17 +150,17 @@
       <updated>1545319096912</updated>
       <workItem from="1545319103995" duration="1035000" />
       <workItem from="1545574048652" duration="311000" />
-      <workItem from="1547310031129" duration="2244000" />
+      <workItem from="1547310031129" duration="2575000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3590000" />
+    <option name="totallyTimeSpent" value="3921000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="51" y="25" width="1229" height="775" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19651741" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19651741" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -188,7 +172,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32972136" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -199,20 +183,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/urok_9/anim.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/urok_11/snake.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-626">
-          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/urok_11/snake.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -278,19 +248,41 @@
         <state relative-caret-position="-308" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/urok_6/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-946" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/urok_5/static/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/urok_5/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/urok_7/code.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/urok_9/anim.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2918">
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/INFO.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="250">
-            <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+          <first_editor relative-caret-position="213">
+            <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/urok_11/snake.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
         </state>
       </provider>
     </entry>
