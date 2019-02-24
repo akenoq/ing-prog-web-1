@@ -8,9 +8,24 @@
     <h1>Блог</h1>
 
     <div id="register">
+        <hr>
+        <h3>Регистрация</h3>
         <label>Логин</label><input type="text" id="loginReg">
         <label>Пароль</label><input type="text" id="passwordReg">
         <button id="btnReg">Регистрация</button>
+    </div>
+
+    <div id="login">
+        <hr>
+        <h3>Вход</h3>
+        <label>Логин</label><input type="text" id="loginLog">
+        <label>Пароль</label><input type="text" id="passwordLog">
+        <button id="btnLog">Войти</button>
+    </div>
+
+    <div id="person" hidden>
+        <b>Привет, <i id="userName"></i></b>
+        <button id="btnExit">Выйти</button>
     </div>
 
     <script src="client.js"></script>

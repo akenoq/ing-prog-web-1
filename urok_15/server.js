@@ -68,7 +68,10 @@ app.post('/api/login', function (request, response) {
 
         // есть ли совпадение
         if (flag === 0) {
-            response.end('USER NOT FOUND')
+            response.end(JSON.stringify({
+                status: "ERROR",
+                message: "USER NOT FOUND"
+            }))
         } else {
             response.end(JSON.stringify({
                 status: "OK",
