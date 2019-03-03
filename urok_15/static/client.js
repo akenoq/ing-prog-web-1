@@ -23,6 +23,11 @@ window.onload = function() {
     const userName = getElem('userName');
     const btnExit = getElem('btnExit');
 
+    // форма ввода поста
+    const titlePost = getElem('titlePost');
+    const textPost = getElem('textPost');
+    const btnNewPost = getElem('btnNewPost');
+
     function showPersonBox() {
         personBox.hidden = false;
         loginBox.hidden = true;
@@ -33,7 +38,7 @@ window.onload = function() {
     if (localStorage.getItem('authString')) {
         showPersonBox();
         // выводить только имя split
-        userName.innerHTML = localStorage.getItem('authString');
+        userName.innerHTML = localStorage.getItem('authString').split('_')[0];
     } else {
         localStorage.setItem('authString', '');
     }
@@ -94,7 +99,31 @@ window.onload = function() {
             // alert(result);
             showPersonBox();
             // выводить только имя split
-            userName.innerHTML = localStorage.getItem('authString');
+            userName.innerHTML = localStorage.getItem('authString').split('_')[0];
+        })
+    }
+
+    // Token - строка из localstorage login_password
+    function getToken() {
+        return localStorage.getItem('authString');
+    }
+
+    function createPost() {
+        const title = titlePost.value;
+        const text = textPost.value;
+        const authString = getToken();
+
+        const body = JSON.stringify({
+            title: title,
+            text: text,
+            authString: authString
+        })
+
+        const url = '/api/post/create';
+        
+        // добавить отправку на сервер
+        sendPostQuery(url, body, (result) => {
+            alert(result);
         })
     }
 
@@ -104,5 +133,14 @@ window.onload = function() {
 
     btnLog.onclick = function () {
         loginFunc();
+    }
+
+    btnExit.onclick = function() {
+        localStorage.setItem('authString', '');
+        window.location.reload();
+    }
+
+    btnNewPost.onclick = function() {
+        createPost();
     }
 };

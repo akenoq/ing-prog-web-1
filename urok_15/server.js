@@ -81,6 +81,56 @@ app.post('/api/login', function (request, response) {
     })
 });
 
+function getIndexUserByToken(userToken) {
+    let userName = userToken.split('_')[0];
+    
+    for (let i = 0; i < users.length; i++) {
+        if (users[i].login === userName) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+app.post('/api/post/create', (request, response) => {
+    let dataString = "";
+
+    request.on('data', (data) => {
+        dataString += data;
+    });
+
+    request.on('end', () => {
+        let dataObj = JSON.parse(dataString);
+        let userToken = dataObj.authString;
+
+        let index = getIndexUserByToken(userToken);
+
+        console.log(index);
+        console.log(dataObj);
+        console.log(users[index].posts);
+        
+        if (index !== -1) {
+            if (!users[index].posts) {
+                users[index].posts = [];
+            }
+
+            users[index].posts.push({
+                title: dataObj.title,
+                text: dataObj.text
+            })
+
+            response.end(JSON.stringify({
+                status: "OK",
+                posts: users[index].posts
+            }))
+        } else {
+            response.end(JSON.stringify({
+                status: "ERROR"
+            }))
+        }
+    })
+});
+
 // function name() {}
 
 // function () {}
