@@ -92,6 +92,15 @@ function getIndexUserByToken(userToken) {
     return -1;
 }
 
+function getIndexUserByName(userName) {
+    for (let i = 0; i < users.length; i++) {
+        if (users[i].login === userName) {
+            return i;
+        }
+    }
+    return -1;
+}
+
 app.post('/api/post/create', (request, response) => {
     let dataString = "";
 
@@ -129,6 +138,25 @@ app.post('/api/post/create', (request, response) => {
             }))
         }
     })
+});
+
+/**
+ * Запрос поста по имени юзера 
+ * http://localhost:5000/api/post/get/Maxim
+ */
+app.get('/api/post/get/:username', (request, response) => {
+    const username = request.params.username;
+    let index = getIndexUserByName(username);
+    if (index !== -1) {
+        response.end(JSON.stringify(users[index].posts))
+    } else {
+        response.end(
+            JSON.stringify({
+                status: "ERROR",
+                message: "User not found"
+            })
+        )
+    }
 });
 
 // function name() {}

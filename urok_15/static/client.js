@@ -43,6 +43,12 @@ window.onload = function() {
         localStorage.setItem('authString', '');
     }
 
+    /**
+     * POST-запрос
+     * @param {*} urlString 
+     * @param {*} bodyString 
+     * @param {*} callback 
+     */
     function sendPostQuery(urlString, bodyString, callback) {
         const xhr = new XMLHttpRequest();
         xhr.open("POST", urlString, true);
@@ -56,6 +62,11 @@ window.onload = function() {
         }
     }
 
+    /**
+     * GET-запрос
+     * @param {} urlString - нужно сформировать правильный url /api/post/get/Maxim
+     * @param {*} callback 
+     */
     function sendGetQuery(urlString, callback) {
         const xhr = new XMLHttpRequest();
         xhr.open("GET", urlString, true);
