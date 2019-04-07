@@ -19,9 +19,17 @@
    
    https://nodejs.org/dist/v8.12.0/node-v8.12.0-x64.msi
    
-* **PostgreSQL** под Windows Инструкция по установке
+* **PostgreSQL** под Windows Инструкция по установке (устанавливаем пароль 12345)
 
    https://info-comp.ru/sisadminst/684-install-postgresql-11-on-windows.html
+  
+  Для консольного режима открываем CMD
+  ```
+  вбиваем в cmd > sql
+  сервер > localhost (enter)
+  имя юзера > postgres (enter)
+  пароль > 12345
+  ```
 
 
 ## ДЗ_1
