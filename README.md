@@ -18,6 +18,11 @@
 * **Node.js** под Windows 64bit
    
    https://nodejs.org/dist/v8.12.0/node-v8.12.0-x64.msi
+   
+* **PostgreSQL** под Windows Инструкция по установке
+
+   https://info-comp.ru/sisadminst/684-install-postgresql-11-on-windows.html
+
 
 ## ДЗ_1
 
