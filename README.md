@@ -33,7 +33,9 @@
   имя юзера > postgres (enter)
   пароль > 12345
   ```
-
+  
+  Веб-конспект по PostgreSQL
+  https://maxim218.gitbooks.io/postgresql/content/
 
 ## ДЗ_1
 
