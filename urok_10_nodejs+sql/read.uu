@@ -1,0 +1,7 @@
+npm init --yes
+
+npm install express --save  
+
+npm install pg@6.1.0 --save    
+
+
