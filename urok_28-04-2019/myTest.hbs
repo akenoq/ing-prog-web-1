@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Тестовая страница</title>
+</head>
+<body>
+
+<h1>Тестовая страница</h1>
+
+<b>Имя:</b>
+<span> {{myName}} </span>
+<br>
+
+<b>Моя почта:</b>
+<span> {{myMail}} </span>
+<br>
+
+<b>Попытка инъекция:</b>
+<span> {{codeHtml}} </span>
+<br>
+
+<h2>Сообщения пользователей</h2>
+
+{{#each myArr}}
+    <b>Имя пользователя:</b>
+    <span> {{this.userName}} </span>
+    <br>
+    <b>Текст сообщения:</b>
+    <span> {{this.message}} </span>
+    <br>
+    <br>
+{{/each}}
+    
+</body>
+</html>

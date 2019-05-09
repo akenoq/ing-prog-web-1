@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Почта</title>
+</head>
+<body>
+
+<h1>Почта</h1>
+
+<b>Логин</b>
+<br>
+<input type = "text" id = "loginField">
+
+<br>
+<br>
+
+<b>Сообщение</b>
+<br>
+<textarea id = "messageField"></textarea>
+
+<br>
+<br>
+
+<button id = "sendMessage">Отправить сообщение</button>
+
+<br>
+<br>
+
+{{#each arr}}
+    <b>Логин: </b>
+    <span> {{this.userName}} </span>
+    <br>
+    <b>Сообщение: </b>
+    <span> {{this.message}} </span>
+    <br>
+    <br>
+{{/each}}
+
+<br>
+<br>
+
+<script src = "/api/code/get"></script>
+    
+</body>
+</html>
